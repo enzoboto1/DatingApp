@@ -1,0 +1,40 @@
+:host {
+	display: block;
+}
+
+header {
+	backdrop-filter: blur(4px);
+	/* explicit gradient fallback to ensure visibility regardless of Tailwind variables */
+	background: linear-gradient(90deg, #5b21b6 0%, #4f2bd1 40%, #0b0712 100%);
+	min-height: 64px;
+	display: flex;
+	align-items: center;
+}
+
+/* tighten inputs inside the black box */
+.login-box {
+	border: 1px solid rgba(0,0,0,0.9);
+	border-radius: 6px;
+	padding: 4px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+}
+
+.login-box .input {
+	height: 36px;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+}
+
+/* make the logo text slightly more spread and visible */
+h3 {
+	letter-spacing: 0.06em;
+	color: #fff !important;
+}
+
+/* nav links and general header text */
+nav a, header a, header nav {
+	color: #fff !important;
+}
+
+/* ensure the header sits above everything */
+header { z-index: 60; }
