@@ -1,9 +1,9 @@
-<app-nav />
-
-<div 
-    [class.mt-24]="router.url !== '/'"
-    [class.container]="router.url !== '/'"
-    [class.mx-auto]="router.url !== '/'"
->
-    <router-outlet />
+<div id="initial-splash" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <div>Loading…</div>
 </div>
+
+<app-nav></app-nav>
+
+<main class="pt-20">
+    <router-outlet></router-outlet>
+</main>

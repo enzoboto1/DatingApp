@@ -8,7 +8,7 @@ import { ToastService } from '../../core/services/toast-service';
   selector: 'app-nav',
   imports: [FormsModule, RouterLink, RouterLinkActive],
   templateUrl: './nav.html',
-  styleUrl: './nav.css'
+  styleUrls: ['./nav.css']
 })
 export class Nav {
   protected accountService = inject(AccountService);

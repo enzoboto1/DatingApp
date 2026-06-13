@@ -1,13 +1,12 @@
-import { Component, inject } from '@angular/core';
-import { Nav } from "../layout/nav/nav";
-import { Router, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Nav } from '../layout/nav/nav';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [Nav, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected router = inject(Router);
-}
+export class App { }

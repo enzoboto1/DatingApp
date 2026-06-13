@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-lists',
   imports: [],
   templateUrl: './lists.html',
-  styleUrl: './lists.css'
+  styleUrls: ['./lists.css']
 })
 export class Lists {
 

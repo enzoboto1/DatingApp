@@ -6,7 +6,7 @@ import { User } from '../../types/user';
   selector: 'app-home',
   imports: [Register],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrls: ['./home.css']
 })
 export class Home {
   protected registerMode = signal(false);

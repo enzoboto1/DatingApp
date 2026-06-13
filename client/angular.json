@@ -1,9 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm"
-  },
   "newProjectRoot": "projects",
   "projects": {
     "client": {
@@ -20,6 +17,10 @@
         "@schematics/angular:guard": {
           "skipTests": true,
           "path": "src/core/guards"
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true,
+          "path": "src/core/interceptors"
         }
       },
       "root": "",
@@ -66,6 +67,9 @@
           "defaultConfiguration": "production"
         },
         "serve": {
+          "options": {
+            "ssl": false
+          },
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
@@ -77,8 +81,23 @@
           },
           "defaultConfiguration": "development"
         },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
         "test": {
-          "builder": "@angular/build:unit-test"
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css"
+            ]
+          }
         }
       }
     }

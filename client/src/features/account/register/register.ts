@@ -7,7 +7,7 @@ import { AccountService } from '../../../core/services/account-service';
   selector: 'app-register',
   imports: [FormsModule],
   templateUrl: './register.html',
-  styleUrl: './register.css'
+  styleUrls: ['./register.css']
 })
 export class Register {
   private accountService = inject(AccountService);
