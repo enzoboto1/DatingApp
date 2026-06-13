@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using API.Interfaces;
 using Microsoft.IdentityModel.Tokens;
+using API.Entities;
 
 namespace API.Services;
 

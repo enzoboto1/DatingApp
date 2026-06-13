@@ -1,34 +1,33 @@
+using API.Entities;
+using API.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace API.Controllers
 {
-
-    public class MembersController : BaseApiController
+    [Authorize]
+    public class MembersController(IMemberRepository memberRepository) : BaseApiController
     {
-        private readonly AppDbContext _context;
-
-        public MembersController(AppDbContext context)
-        {
-            _context = context;
-        }
-
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<AppUser>>> GetMembers()
+        public async Task<ActionResult<IReadOnlyList<Member>>> GetMembers()
         {
-            var members = await _context.Users.ToListAsync();
-            return Ok(members);
+            return Ok(await memberRepository.GetMembersAsync());
         }
 
-        [Authorize]
-        [HttpGet("{id}")]
-        public async Task<ActionResult<AppUser>> GetMember(string id)
+        [HttpGet("{id}")] // locahost:5001/api/members/bob-id
+        public async Task<ActionResult<Member>> GetMember(string id)
         {
-            var member = await _context.Users.FindAsync(id);
+            var member = await memberRepository.GetMemberByIdAsync(id);
+
             if (member == null) return NotFound();
-            return Ok(member);
+
+            return member;
+        }
+
+        [HttpGet("{id}/photos")]
+        public async Task<ActionResult<IReadOnlyList<Photo>>> GetMemberPhotos(string id)
+        {
+            return Ok(await memberRepository.GetPhotosForMemberAsync(id));
         }
     }
 }

@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using API.DTOs;
 using API.Interfaces;
 using API.Extensions;
+using API.Entities;
 
 namespace API.Controllers;
 
@@ -35,7 +36,7 @@ public class AccountController(AppDbContext context, ITokenService tokenService)
 
     private async Task<bool> EmailExists(string email)
     {
-        return await context.Users.AnyAsync<AppUser>(x => x.Email.ToLower() == email.ToLower());
+        return await context.Users.AnyAsync(x => x.Email.ToLower() == email.ToLower());
     }
 
     [HttpPost("login")]
