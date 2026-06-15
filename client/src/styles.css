@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-/* DaisyUI is configured as a Tailwind plugin in tailwind.config.cjs */
+/* DaisyUI is registered as a plugin in tailwind.config.cjs */
