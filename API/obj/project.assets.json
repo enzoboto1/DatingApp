@@ -2817,11 +2817,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\DatingApp\\api\\API.csproj",
+      "projectUniqueName": "C:\\Dev\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Dev\\DatingApp\\api\\API.csproj",
+      "projectPath": "C:\\Dev\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\enzob\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\DatingApp\\api\\obj\\",
+      "outputPath": "C:\\Dev\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3327,7 +3327,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"
