@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: ./API
+      dockerfile: Dockerfile
+    volumes:
+      - ./API:/src:cached
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    stdin_open: true
+    tty: true

@@ -13,6 +13,8 @@ public class AppDbContext(DbContextOptions options) : IdentityDbContext<AppUser>
     public DbSet<Photo> Photos { get; set; }
     public DbSet<MemberLike> Likes { get; set; }
     public DbSet<Message> Messages { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<Connection> Connections { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,7 +24,7 @@ public class AppDbContext(DbContextOptions options) : IdentityDbContext<AppUser>
             .HasData(
                 new IdentityRole { Id = "member-id", Name = "Member", NormalizedName = "MEMBER", ConcurrencyStamp = "1560e354-159b-4bb1-89cc-2010aebd6432" },
                 new IdentityRole { Id = "moderator-id", Name = "Moderator", NormalizedName = "MODERATOR", ConcurrencyStamp = "a1c5ac5c-2c7d-4783-8bdb-9b1b4f3bf7d8" },
-                new IdentityRole { Id = "admin-id", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "d7869c66-677c-4a7f-b7f6-a92ee50197ab" }
+                new IdentityRole { Id = "admin-id", Name = "Admin", NormalizedName = "ADMIN", ConcurrencyStamp = "d7869c66-677c-4a7c-b7f6-a92ee50197ab" }
             );
 
         modelBuilder.Entity<Message>()
