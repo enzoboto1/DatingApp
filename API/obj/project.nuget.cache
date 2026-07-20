@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ADSVKxeCRzo=",
+  "dgSpecHash": "ynP85WduHlE=",
   "success": true,
   "projectFilePath": "C:\\Dev\\DatingApp\\api\\API.csproj",
   "expectedPackageFiles": [
@@ -36,7 +36,7 @@
     "C:\\Users\\enzob\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\enzob\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\enzob\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
-    "C:\\Users\\enzob\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "C:\\Users\\enzob\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\3.50.3\\sqlitepclraw.lib.e_sqlite3.3.50.3.nupkg.sha512",
     "C:\\Users\\enzob\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.11\\sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\enzob\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\enzob\\.nuget\\packages\\system.composition\\9.0.0\\system.composition.9.0.0.nupkg.sha512",
@@ -49,9 +49,9 @@
   ],
   "logs": [
     {
-      "code": "NU1903",
+      "code": "NU1603",
       "level": "Warning",
-      "message": "O pacote 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "message": "API depende de SQLitePCLRaw.lib.e_sqlite3 (>= 2.1.14), mas SQLitePCLRaw.lib.e_sqlite3 2.1.14 não foi encontrado. SQLitePCLRaw.lib.e_sqlite3 3.50.3 foi resolvido em vez disso.",
       "projectPath": "C:\\Dev\\DatingApp\\api\\API.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Dev\\DatingApp\\api\\API.csproj",

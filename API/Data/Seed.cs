@@ -51,7 +51,8 @@ public class Seed
             user.Member.Photos.Add(new Photo
             {
                 Url = member.ImageUrl!,
-                MemberId = member.Id
+                MemberId = member.Id,
+                IsApproved = true
             });
 
             var result = await userManager.CreateAsync(user, "Pa$$w0rd");
@@ -72,4 +73,4 @@ public class Seed
         await userManager.CreateAsync(admin, "Pa$$w0rd");
         await userManager.AddToRolesAsync(admin, ["Admin", "Moderator"]);
     }
-}
+}   

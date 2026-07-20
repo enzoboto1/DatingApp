@@ -37,6 +37,7 @@ public class MessageHub(IMessageRepository messageRepository,
 
         var message = new Message
         {
+            Id = Guid.NewGuid().ToString(),
             SenderId = sender.Id,
             RecipientId = recipient.Id,
             Content = createMessageDto.Content

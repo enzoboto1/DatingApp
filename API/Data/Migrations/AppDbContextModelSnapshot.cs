@@ -138,7 +138,9 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Created")
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<DateOnly>("DateOfBirth")
                         .HasColumnType("TEXT");
@@ -158,7 +160,9 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("LastActive")
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.HasKey("Id");
 
@@ -193,7 +197,9 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("MessageSent")
-                        .HasColumnType("TEXT");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<bool>("RecipientDeleted")
                         .HasColumnType("INTEGER");
@@ -222,6 +228,9 @@ namespace API.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsApproved")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("MemberId")
@@ -271,21 +280,21 @@ namespace API.Data.Migrations
                         new
                         {
                             Id = "member-id",
-                            ConcurrencyStamp = "1560e354-159b-4bb1-89cc-2010aebd6432",
+                            ConcurrencyStamp = "eff4694e-07b4-4374-9f97-06569452904c",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
                             Id = "moderator-id",
-                            ConcurrencyStamp = "a1c5ac5c-2c7d-4783-8bdb-9b1b4f3bf7d8",
+                            ConcurrencyStamp = "0c46dd69-9dc7-45fb-9350-82d3d48f4a20",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         },
                         new
                         {
                             Id = "admin-id",
-                            ConcurrencyStamp = "d7869c66-677c-4a7c-b7f6-a92ee50197ab",
+                            ConcurrencyStamp = "efc39bf6-7d65-4311-8423-b57fe8b046c4",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

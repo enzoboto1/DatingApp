@@ -70,6 +70,10 @@
               "target": "Package",
               "version": "[8.19.1, )"
             },
+            "SQLitePCLRaw.lib.e_sqlite3": {
+              "target": "Package",
+              "version": "[2.1.14, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.19.1, )"
