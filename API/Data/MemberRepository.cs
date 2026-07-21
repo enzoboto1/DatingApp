@@ -18,7 +18,6 @@ public class MemberRepository(AppDbContext context) : IMemberRepository
         return await context.Members
             .Include(x => x.User)
             .Include(x => x.Photos)
-            .IgnoreQueryFilters()
             .SingleOrDefaultAsync(x => x.Id == id);
     }
 
@@ -48,15 +47,12 @@ public class MemberRepository(AppDbContext context) : IMemberRepository
                 memberParams.PageNumber, memberParams.PageSize);
     }
 
-    public async Task<IReadOnlyList<Photo>> GetPhotosForMemberAsync(string memberId, bool isCurrentUser)
+    public async Task<IReadOnlyList<Photo>> GetPhotosForMemberAsync(string memberId)
     {
-        var query = context.Members
+        return await context.Members
             .Where(x => x.Id == memberId)
-            .SelectMany(x => x.Photos);
-
-        if (isCurrentUser) query = query.IgnoreQueryFilters();
-
-        return await query.ToListAsync();
+            .SelectMany(x => x.Photos)
+            .ToListAsync();
     }
 
     public void Update(Member member)

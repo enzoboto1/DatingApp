@@ -23,9 +23,7 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 builder.Services.AddCors();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IPhotoService, PhotoService>();
-builder.Services.AddScoped<IMemberRepository, MemberRepository>();
-builder.Services.AddScoped<IMessageRepository, MessageRepository>();
-builder.Services.AddScoped<ILikesRepository, LikesRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<LogUserActivity>();
 builder.Services.Configure<CloudinarySettings>(builder.Configuration
     .GetSection("CloudinarySettings"));
@@ -98,29 +96,25 @@ try
     var context = services.GetRequiredService<AppDbContext>();
     var userManager = services.GetRequiredService<UserManager<AppUser>>();
     await context.Database.MigrateAsync();
+
     try
     {
         var connection = context.Database.GetDbConnection();
         await connection.OpenAsync();
-        try
+        using (var command = connection.CreateCommand())
         {
-            using var cmd = connection.CreateCommand();
-            cmd.CommandText = "SELECT name FROM sqlite_master WHERE type='table' AND name='Connections';";
-            var exists = await cmd.ExecuteScalarAsync();
+            command.CommandText = "SELECT name FROM sqlite_master WHERE type='table' AND name='Connections'";
+            var exists = await command.ExecuteScalarAsync();
             if (exists != null)
             {
                 await context.Connections.ExecuteDeleteAsync();
             }
         }
-        finally
-        {
-            await connection.CloseAsync();
-        }
     }
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogWarning(ex, "Could not clear Connections table during startup; it may not exist yet.");
+        logger.LogWarning(ex, "Could not delete from Connections table (it may not exist yet)");
     }
 
     await Seed.SeedUsers(userManager);
