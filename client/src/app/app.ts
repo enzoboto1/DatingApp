@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Nav } from '../layout/nav/nav';
+import { Component, inject } from '@angular/core';
+import { Nav } from "../layout/nav/nav";
+import { Router, RouterOutlet } from '@angular/router';
+import { ConfirmDialog } from "../shared/confirm-dialog/confirm-dialog";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [Nav, RouterOutlet],
+  imports: [Nav, RouterOutlet, ConfirmDialog],
   templateUrl: './app.html',
-  styleUrls: ['./app.css']
+  styleUrl: './app.css'
 })
-export class App { }
+export class App {
+  protected router = inject(Router);
+}
