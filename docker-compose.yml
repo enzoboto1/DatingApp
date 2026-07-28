@@ -10,5 +10,22 @@ services:
       - "5000:5000"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db,1433;Database=datingdb;User Id=SA;Password=Password@1;TrustServerCertificate=true
+    depends_on:
+      - db
     stdin_open: true
     tty: true
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Password@1
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql
+
+volumes:
+  sqlserverdata:
