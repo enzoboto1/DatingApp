@@ -714,7 +714,7 @@
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3/3.50.3": {
+      "SQLitePCLRaw.lib.e_sqlite3/2.1.11": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -726,45 +726,9 @@
           "buildTransitive/net9.0/SQLitePCLRaw.lib.e_sqlite3.targets": {}
         },
         "runtimeTargets": {
-          "runtimes/android-arm/native/libe_sqlite3.so": {
-            "assetType": "native",
-            "rid": "android-arm"
-          },
-          "runtimes/android-arm64/native/libe_sqlite3.so": {
-            "assetType": "native",
-            "rid": "android-arm64"
-          },
-          "runtimes/android-x64/native/libe_sqlite3.so": {
-            "assetType": "native",
-            "rid": "android-x64"
-          },
-          "runtimes/android-x86/native/libe_sqlite3.so": {
-            "assetType": "native",
-            "rid": "android-x86"
-          },
           "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a": {
             "assetType": "native",
             "rid": "browser-wasm"
-          },
-          "runtimes/ios-arm/native/e_sqlite3.a": {
-            "assetType": "native",
-            "rid": "ios-arm"
-          },
-          "runtimes/ios-arm64/native/e_sqlite3.a": {
-            "assetType": "native",
-            "rid": "ios-arm64"
-          },
-          "runtimes/iossimulator-arm64/native/e_sqlite3.a": {
-            "assetType": "native",
-            "rid": "iossimulator-arm64"
-          },
-          "runtimes/iossimulator-x64/native/e_sqlite3.a": {
-            "assetType": "native",
-            "rid": "iossimulator-x64"
-          },
-          "runtimes/iossimulator-x86/native/e_sqlite3.a": {
-            "assetType": "native",
-            "rid": "iossimulator-x86"
           },
           "runtimes/linux-arm/native/libe_sqlite3.so": {
             "assetType": "native",
@@ -790,6 +754,10 @@
             "assetType": "native",
             "rid": "linux-musl-arm64"
           },
+          "runtimes/linux-musl-riscv64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-riscv64"
+          },
           "runtimes/linux-musl-s390x/native/libe_sqlite3.so": {
             "assetType": "native",
             "rid": "linux-musl-s390x"
@@ -801,6 +769,10 @@
           "runtimes/linux-ppc64le/native/libe_sqlite3.so": {
             "assetType": "native",
             "rid": "linux-ppc64le"
+          },
+          "runtimes/linux-riscv64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-riscv64"
           },
           "runtimes/linux-s390x/native/libe_sqlite3.so": {
             "assetType": "native",
@@ -829,6 +801,10 @@
           "runtimes/osx-x64/native/libe_sqlite3.dylib": {
             "assetType": "native",
             "rid": "osx-x64"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
           },
           "runtimes/win-arm64/native/e_sqlite3.dll": {
             "assetType": "native",
@@ -2580,39 +2556,35 @@
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "SQLitePCLRaw.lib.e_sqlite3/3.50.3": {
-      "sha512": "tVyhqQ8wxgedWiiPFChyZhE8I3PkOM/AE1azsj1qsdYUws13ONBFyi3aDxju4tD2kzedB2q5+50WrTyY0h2gMQ==",
+    "SQLitePCLRaw.lib.e_sqlite3/2.1.11": {
+      "sha512": "Ev2ytaXiOlWZ4b3R67GZBsemTINslLD1DCJr2xiacpn4tbapu0Q4dHEzSvZSMnVWeE5nlObU3VZN2p81q3XOYQ==",
       "type": "package",
-      "path": "sqlitepclraw.lib.e_sqlite3/3.50.3",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.1.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "buildTransitive/net471/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net461/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net6.0/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "buildTransitive/net7.0/SQLitePCLRaw.lib.e_sqlite3.targets",
         "buildTransitive/net8.0/SQLitePCLRaw.lib.e_sqlite3.targets",
         "buildTransitive/net9.0/SQLitePCLRaw.lib.e_sqlite3.targets",
-        "lib/net471/_._",
+        "lib/net461/_._",
         "lib/netstandard2.0/_._",
-        "runtimes/android-arm/native/libe_sqlite3.so",
-        "runtimes/android-arm64/native/libe_sqlite3.so",
-        "runtimes/android-x64/native/libe_sqlite3.so",
-        "runtimes/android-x86/native/libe_sqlite3.so",
+        "runtimes/browser-wasm/nativeassets/net6.0/e_sqlite3.a",
+        "runtimes/browser-wasm/nativeassets/net7.0/e_sqlite3.a",
         "runtimes/browser-wasm/nativeassets/net8.0/e_sqlite3.a",
         "runtimes/browser-wasm/nativeassets/net9.0/e_sqlite3.a",
-        "runtimes/ios-arm/native/e_sqlite3.a",
-        "runtimes/ios-arm64/native/e_sqlite3.a",
-        "runtimes/iossimulator-arm64/native/e_sqlite3.a",
-        "runtimes/iossimulator-x64/native/e_sqlite3.a",
-        "runtimes/iossimulator-x86/native/e_sqlite3.a",
         "runtimes/linux-arm/native/libe_sqlite3.so",
         "runtimes/linux-arm64/native/libe_sqlite3.so",
         "runtimes/linux-armel/native/libe_sqlite3.so",
         "runtimes/linux-mips64/native/libe_sqlite3.so",
         "runtimes/linux-musl-arm/native/libe_sqlite3.so",
         "runtimes/linux-musl-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-musl-riscv64/native/libe_sqlite3.so",
         "runtimes/linux-musl-s390x/native/libe_sqlite3.so",
         "runtimes/linux-musl-x64/native/libe_sqlite3.so",
         "runtimes/linux-ppc64le/native/libe_sqlite3.so",
+        "runtimes/linux-riscv64/native/libe_sqlite3.so",
         "runtimes/linux-s390x/native/libe_sqlite3.so",
         "runtimes/linux-x64/native/libe_sqlite3.so",
         "runtimes/linux-x86/native/libe_sqlite3.so",
@@ -2620,10 +2592,15 @@
         "runtimes/maccatalyst-x64/native/libe_sqlite3.dylib",
         "runtimes/osx-arm64/native/libe_sqlite3.dylib",
         "runtimes/osx-x64/native/libe_sqlite3.dylib",
+        "runtimes/win-arm/native/e_sqlite3.dll",
         "runtimes/win-arm64/native/e_sqlite3.dll",
         "runtimes/win-x64/native/e_sqlite3.dll",
         "runtimes/win-x86/native/e_sqlite3.dll",
-        "sqlitepclraw.lib.e_sqlite3.3.50.3.nupkg.sha512",
+        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
         "sqlitepclraw.lib.e_sqlite3.nuspec"
       ]
     },
@@ -2862,7 +2839,6 @@
       "Microsoft.EntityFrameworkCore.Design >= 10.0.8",
       "Microsoft.EntityFrameworkCore.Sqlite >= 10.0.8",
       "Microsoft.IdentityModel.Tokens >= 8.19.1",
-      "SQLitePCLRaw.lib.e_sqlite3 >= 2.1.14",
       "System.IdentityModel.Tokens.Jwt >= 8.19.1"
     ]
   },
@@ -2872,11 +2848,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\DatingApp\\api\\API.csproj",
+      "projectUniqueName": "C:\\Dev\\DatingApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Dev\\DatingApp\\api\\API.csproj",
+      "projectPath": "C:\\Dev\\DatingApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\enzob\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\DatingApp\\api\\obj\\",
+      "outputPath": "C:\\Dev\\DatingApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\enzob\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2934,10 +2910,6 @@
           "Microsoft.IdentityModel.Tokens": {
             "target": "Package",
             "version": "[8.19.1, )"
-          },
-          "SQLitePCLRaw.lib.e_sqlite3": {
-            "target": "Package",
-            "version": "[2.1.14, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
@@ -3383,10 +3355,10 @@
   },
   "logs": [
     {
-      "code": "NU1603",
+      "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "API depende de SQLitePCLRaw.lib.e_sqlite3 (>= 2.1.14), mas SQLitePCLRaw.lib.e_sqlite3 2.1.14 não foi encontrado. SQLitePCLRaw.lib.e_sqlite3 3.50.3 foi resolvido em vez disso.",
+      "message": "Package 'SQLitePCLRaw.lib.e_sqlite3' 2.1.11 has a known high severity vulnerability, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
       "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
       "targetGraphs": [
         "net10.0"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\DatingApp\\api\\API.csproj": {}
+    "C:\\Dev\\DatingApp\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\DatingApp\\api\\API.csproj": {
+    "C:\\Dev\\DatingApp\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\DatingApp\\api\\API.csproj",
+        "projectUniqueName": "C:\\Dev\\DatingApp\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Dev\\DatingApp\\api\\API.csproj",
+        "projectPath": "C:\\Dev\\DatingApp\\API\\API.csproj",
         "packagesPath": "C:\\Users\\enzob\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\DatingApp\\api\\obj\\",
+        "outputPath": "C:\\Dev\\DatingApp\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\enzob\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -69,10 +69,6 @@
             "Microsoft.IdentityModel.Tokens": {
               "target": "Package",
               "version": "[8.19.1, )"
-            },
-            "SQLitePCLRaw.lib.e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.14, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
