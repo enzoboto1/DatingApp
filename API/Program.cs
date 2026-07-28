@@ -85,9 +85,13 @@ app.UseCors(x => x
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapControllers();
 app.MapHub<PresenceHub>("hubs/presence");
 app.MapHub<MessageHub>("hubs/messages");
+app.MapFallbackToController("Index", "Fallback");
 
 using var scope = app.Services.CreateScope();
 var services = scope.ServiceProvider;
@@ -96,27 +100,7 @@ try
     var context = services.GetRequiredService<AppDbContext>();
     var userManager = services.GetRequiredService<UserManager<AppUser>>();
     await context.Database.MigrateAsync();
-
-    try
-    {
-        var connection = context.Database.GetDbConnection();
-        await connection.OpenAsync();
-        using (var command = connection.CreateCommand())
-        {
-            command.CommandText = "SELECT name FROM sqlite_master WHERE type='table' AND name='Connections'";
-            var exists = await command.ExecuteScalarAsync();
-            if (exists != null)
-            {
-                await context.Connections.ExecuteDeleteAsync();
-            }
-        }
-    }
-    catch (Exception ex)
-    {
-        var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogWarning(ex, "Could not delete from Connections table (it may not exist yet)");
-    }
-
+    await context.Connections.ExecuteDeleteAsync();
     await Seed.SeedUsers(userManager);
 }
 catch (Exception ex)
